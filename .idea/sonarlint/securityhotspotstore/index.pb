@@ -20,3 +20,5 @@ d
 4src/main/java/edu/icet/demo/service/BookService.java,3\b\3bcdfeff18171a9efd481fd6f1c6f5d0fdb32177
 m
 =src/main/java/edu/icet/demo/service/impl/BookServiceImpl.java,c\d\cd32fd13d66cfcc4ec34e963a54d575fdf01e38c
+b
+2src/main/java/edu/icet/demo/entity/BookEntity.java,2\4\2487ccc9291937a02aed72269ca34c7b031f76e5
