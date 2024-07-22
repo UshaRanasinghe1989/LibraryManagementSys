@@ -4,7 +4,6 @@ import edu.icet.demo.model.Book;
 import edu.icet.demo.repository.BookRepository;
 import edu.icet.demo.service.BookService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,7 +12,14 @@ public class BookServiceImpl implements BookService {
     private final BookRepository repository;
 
     @Override
-    public void persist(Book book) {
+    public int persist(Book book) {
+        int count = 0;
+        try {
+            count = repository.retrieveBookCount();
 
+        }catch (NullPointerException e){
+
+        }
+        return count;
     }
 }

@@ -5,6 +5,9 @@ import edu.icet.demo.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
+import java.util.Map;
+
 @RestController
 @CrossOrigin
 @RequiredArgsConstructor
@@ -13,7 +16,7 @@ public class BookController {
     private final BookService service;
 
     @PostMapping("/")
-    void persist(@RequestBody Book book){
-        service.persist(book);
+    Map<String, Integer> persist(@RequestBody Book book){
+        return Collections.singletonMap("Customer count ", service.persist(book));
     }
 }
