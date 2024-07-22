@@ -26,3 +26,5 @@ j
 :src/main/java/edu/icet/demo/repository/BookRepository.java,4\9\49c730ece7c9ede67b81dc51924a48ae4bacd23a
 s
 Csrc/main/java/edu/icet/demo/repository/impl/BookRepositoryImpl.java,1\c\1c1cfdeb3b7bcfb8c045f3827117e5b250e1d8f2
+q
+Asrc/main/java/edu/icet/demo/repository/jpa/BookJpaRepository.java,a\6\a68d4790e91778c8f5cdb9ae1fa848be4b409e30

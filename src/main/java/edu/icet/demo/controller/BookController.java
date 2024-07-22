@@ -15,8 +15,8 @@ import java.util.Map;
 public class BookController {
     private final BookService service;
 
-    @PostMapping("/")
-    Map<String, Integer> persist(@RequestBody Book book){
-        return Collections.singletonMap("Customer count ", service.persist(book));
+    @PostMapping()
+    Book persist(@RequestBody Book book){
+        return service.persist(book);
     }
 }
