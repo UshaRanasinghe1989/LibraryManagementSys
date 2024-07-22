@@ -14,6 +14,6 @@ public class BookController {
 
     @PostMapping("/")
     void persist(@RequestBody Book book){
-
+        service.persist(book);
     }
 }
