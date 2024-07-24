@@ -1,5 +1,7 @@
 package edu.icet.demo.repository;
 
+import java.util.Optional;
+
 public interface BookRepository {
-    int retrieveBookCount();
+    Optional<Integer> retrieveBookCount();
 }
