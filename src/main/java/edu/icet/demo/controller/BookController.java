@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -17,6 +18,30 @@ public class BookController {
 
     @PostMapping()
     Book persist(@RequestBody Book book){
-        return service.persist(book);
+        Book saveBook =Book.builder()
+                .name(book.getName())
+                .isbn(book.getIsbn())
+                .price(book.getPrice())
+                .build();
+        return service.persist(saveBook);
+    }
+
+    @GetMapping()
+    List<Book> retrieve(){
+        return service.retrieve();
+    }
+    @PutMapping()
+    Book update(@RequestBody Book book){
+        return service.update(book);
+    }
+
+    @DeleteMapping()
+    void delete(@RequestBody Book book){
+        service.delete(book);
+    }
+
+    @GetMapping("/find-by-name/{name}")
+    Book findByName(@PathVariable String name){
+        return service.findByName(name);
     }
 }
